@@ -15,7 +15,7 @@ const myStyles = {
   title: "Antennes deployées",
   headerTintColor: "white",
   headerStyle: {
-    backgroundColor: "blue",
+    backgroundColor: "black",
   },
 };
 
