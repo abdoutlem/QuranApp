@@ -5,9 +5,11 @@ import Contants from "expo-constants";
 import Create from "./Screens/Create";
 import AntennaDetails from "./Screens/AntennaDetails";
 import AntennaEdit from "./Screens/AntennaEdit";
+import { useEffect } from "react";
 
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import SplashScreen from "react-native-splash-screen";
 
 const Stack = createStackNavigator();
 
@@ -15,7 +17,7 @@ const myStyles = {
   title: "Antennes deployées",
   headerTintColor: "white",
   headerStyle: {
-    backgroundColor: "black",
+    backgroundColor: "blue",
   },
 };
 
@@ -45,6 +47,10 @@ function App() {
 }
 
 export default () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
     <NavigationContainer>
       <App />
